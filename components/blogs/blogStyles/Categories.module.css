@@ -1,0 +1,117 @@
+.Categories {
+  font-family: var(--font-roboto);
+  color: white;
+  margin: 30px 20px;
+}
+.cardCatDisplay {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  row-gap: 12px;
+  column-gap: 20px;
+}
+.Categories h1 {
+  padding: 10px 30px;
+}
+.cardCategory {
+  display: inline-block;
+  border-radius: 10px;
+  height: 250px;
+  column-gap: 15px;
+  box-shadow: 0px 0px 7px 1px white;
+}
+.cardCategory img {
+  border-radius: 10px;
+  width: 100%;
+  height: 250px;
+  filter: brightness(0.6);
+}
+.cardCategory p {
+  display: inline-block;
+  position: relative;
+  top: -80px;
+  left: 15px;
+  margin: 0;
+  color: white;
+  font-family: var(--font-roboto);
+  font-weight: 900;
+  font-size: 30px;
+  z-index: 1;
+  cursor: pointer;
+}
+.cardCategory p:hover {
+  -webkit-transform: translateY(-6px);
+  transform: translateY(-6px);
+  transition-duration: 0.6s;
+}
+
+/* categories on width 900px */
+.catFlex {
+  display: none;
+  justify-content: space-between;
+  font-family: var(--font-roboto);
+  padding: 0px 10px;
+  align-items: center;
+  position: fixed;
+  top: 70px;
+  width: 100%;
+  background-color: black;
+  z-index: 999;
+}
+.catFlex > h3 {
+  color: white;
+  margin: 0;
+}
+.dropbtn {
+  background-color: rgba(255, 255, 255, 0);
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  color: white;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  z-index: 1100;
+  right: 10px;
+  box-shadow: 0px 0px 7px 1px grey;
+  min-width: 110px;
+}
+.cardCategoryFlex p {
+  margin: 0;
+  padding: 10px 20px;
+  text-align: center;
+}
+.cardCategoryFlex p:hover {
+  background-color: #ddd;
+  color: black;
+}
+.show {
+  display: block;
+}
+
+
+/* media queries */
+@media (max-width: 897px) {
+  .Categories {
+    display: none;
+  }
+  .catFlex {
+    display: flex;
+  }
+}
+@media (max-width: 610px) {
+  .catFlex {
+    position: fixed;
+    top: 115px;
+  }
+}

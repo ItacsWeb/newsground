@@ -1,0 +1,53 @@
+.youtube,.instagram,.stackOverflow,.github{
+    font-family: var(--font-roboto);
+    background-color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    padding:20px 50px;
+    border-radius:30px;
+    margin: 30px 0px;
+    text-align: center;
+}
+.youtube i{
+    color:red
+}
+.instagram i{
+    background: -webkit-linear-gradient(blue, rgb(241, 6, 241));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.youtube a,.instagram a,.stackOverflow a,.github a{
+    text-decoration: none;
+    color: black;
+    font-size:40px
+}
+.youtube i,.stackOverflow i,.github i,.instagram i{
+    font-size:200px;
+    padding: 0px 0px 20px 0px;
+}
+.stackOverflow i{
+    color: goldenrod;
+}
+.github a:hover, .instagram a:hover ,.stackOverflow a:hover, .youtube a:hover{
+    transform: translateY(-6px);
+    transition: all 0.6s
+}
+.join{
+    display: flex;
+    width:100%;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    padding: 55px 0px 
+}
+@media(max-width: 340px){
+    .youtube, .github, .instagram,.stackOverflow{
+        width: 90%;
+        margin: 10px;
+    }
+    .join{
+        padding: 20px 0px;
+    }
+}
