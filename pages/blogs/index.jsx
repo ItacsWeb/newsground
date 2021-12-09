@@ -1,6 +1,7 @@
 import { getPosts, getRecentPostsCard } from "../../services";
 import { Categories} from "../../components/blogs";
 import Head from 'next/head'
+import Image from 'next/image'
 import React, { useState, useEffect } from 'react'
 import Link from "next/link";
 
@@ -29,7 +30,7 @@ export default function Blog({ posts }) {
           return (
             <div className={styles.cardBlogDiv} key={post.id}>
               <div className={styles.cardBlog} >
-                <img src={post.featuredImage.url} alt="" />
+                <Image src={post.featuredImage.url} alt=""></Image>
                 <h3>{post.title.slice(0, 40)}...</h3>
                 <p>{(post.excerpt).toString().slice(0, 130)}...</p>
                 <Link href={`/blogs/post/${post.slug}`} title={`Let's go to ${post.title}`}>Read This Article📖</Link>

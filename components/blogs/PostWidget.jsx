@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import Link from 'next/link'
 import moment from 'moment'
+import Image from 'next/image'
 import {getRecentPosts , getSimilarPosts} from '../../services'
 
 import styles from './blogStyles/PostWidget.module.css'
@@ -29,11 +30,9 @@ const PostWidget = ({categories , slug}) => {
                 <Link href={`/blogs/post/${post.slug}`} key={post.slug}>
                 <div  className={styles.postWidgetContent}>
                     <div className={styles.postWidgetImage}>
-                        <img 
-                        src={post.featuredImage.url} 
+                        <Image src={post.featuredImage.url} 
                         alt="" 
-                        className={styles.postWidgetImg} 
-                        />
+                        className={styles.postWidgetImg} ></Image>
                     </div>
                     <div className={styles.postWidgetIntro}>
                         <p>{moment(post.createdAt).format('MMM DD, YYYY')}</p>
