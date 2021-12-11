@@ -1,7 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-import Image from 'next/image'
 import styles from '../.././components/blogs/blogStyles/Category.module.css'
 const PostCard = ({post}) => {
     return (
@@ -10,7 +9,7 @@ const PostCard = ({post}) => {
                 <title>Posts based on your Search...</title>
             </Head>
             <div className={styles.postCardDiv}>
-            <Image src={post.featuredImage.url} alt="" ></Image>
+            <img src={post.featuredImage.url} alt="" ></img>
             <h3>{post.title.slice(0, 40)}...</h3>
             <p>{(post.excerpt).toString().slice(0, 130)}...</p>
             <Link href={`/blogs/post/${post.slug}`}>Go To Post 📑</Link>

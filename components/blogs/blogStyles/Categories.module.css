@@ -107,6 +107,8 @@
   }
   .catFlex {
     display: flex;
+    position: fixed;
+    top: 115px;
   }
 }
 @media (max-width: 610px) {

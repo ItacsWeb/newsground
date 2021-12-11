@@ -39,7 +39,7 @@
         justify-content:space-between
     }
 }
-@media(max-width:610px){
+@media(max-width:897px){
     .navbar{
         flex-direction: column;
         position:-webkit-sticky;

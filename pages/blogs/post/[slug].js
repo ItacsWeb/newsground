@@ -2,10 +2,15 @@ import React from 'react'
 import Head from 'next/head'
 import { getPosts, getPostDetails } from '../../../services'
 import { PostDetail, PostWidget } from '../../../components/blogs';
+import { useRouter } from 'next/router'
 
 import styles from '../../../components/blogs/blogStyles/Slug.module.css'
 
 const FullPost = ({ post }) => {
+    const router = useRouter()
+    if (router.isFallback) {
+        return <div style={{color:"white",fontFamily:"var(--font-roboto)",alignItems: "center"}}>Loading...</div>
+      }
     return (
         <div className={styles.slug} lang="en">
             <Head>

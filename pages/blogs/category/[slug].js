@@ -3,8 +3,13 @@ import Head from 'next/head'
 import { PostCard } from '../../../components/blogs'
 import { getCategories, getCategoryPost } from '../../../services';
 import styles from '../../../components/blogs/blogStyles/Category.module.css'
+import { useRouter } from 'next/router'
 
 const CategoryPage = ({ posts }) => {
+  const router = useRouter()
+  if (router.isFallback) {
+      return <div style={{color:"white",fontFamily:"var(--font-roboto)",alignItems: "center"}}>Loading...</div>
+    }
   return (
     <div className={styles.slug} lang="en">
       <Head>

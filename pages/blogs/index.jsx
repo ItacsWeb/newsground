@@ -30,7 +30,7 @@ export default function Blog({ posts }) {
           return (
             <div className={styles.cardBlogDiv} key={post.id}>
               <div className={styles.cardBlog} >
-                <Image src={post.featuredImage.url} alt=""></Image>
+                <img src={post.featuredImage.url} alt=""></img>
                 <h3>{post.title.slice(0, 40)}...</h3>
                 <p>{(post.excerpt).toString().slice(0, 130)}...</p>
                 <Link href={`/blogs/post/${post.slug}`} title={`Let's go to ${post.title}`}>Read This Article📖</Link>
