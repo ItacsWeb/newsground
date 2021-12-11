@@ -1,7 +1,6 @@
 import { getPosts, getRecentPostsCard } from "../../services";
 import { Categories} from "../../components/blogs";
 import Head from 'next/head'
-import Image from 'next/image'
 import React, { useState, useEffect } from 'react'
 import Link from "next/link";
 
